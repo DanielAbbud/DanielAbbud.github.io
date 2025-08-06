@@ -47,34 +47,6 @@ const phoneNumber = '553897290904'; // Numero de telefone
 - País (55) + DDD + Número
 - Exemplo: 5511987654321 para (11) 98765-4321
 
-### 2. Personalização de Conteúdo
-
-#### Alterar Informações de Contato
-No arquivo `index.html`, procure por:
-- `(38) 9729-0904` - Substitua pelo seu número
-- `cauaneres2@gmail.com` - Substitua pelo seu email
-
-#### Modificar Planos e Preços
-Localize as seções dos planos no `index.html` e ajuste:
-- Preços
-- Quantidade de canais
-- Recursos incluídos
-- Descrições
-
-### 3. Hospedagem
-
-#### Opção 1: Servidor Local (Teste)
-```bash
-cd site_iptv
-python3 -m http.server 8000
-# Acesse: http://localhost:8000
-```
-
-#### Opção 2: Hospedagem Online
-- **Netlify**: Arraste a pasta para netlify.com
-- **Vercel**: Conecte com GitHub e faça deploy
-- **GitHub Pages**: Suba para repositório e ative Pages
-
 ## Mensagens WhatsApp Personalizadas
 
 O site gera mensagens automáticas para cada plano:
@@ -85,43 +57,8 @@ O site gera mensagens automáticas para cada plano:
 ### Plano Premium  
 > "Olá! Tenho interesse no *Plano Premium* de Zaapppyy TV  por R$ 29,90/mês. Gostaria de mais informações sobre como assinar."
 
-## Customizações Avançadas
-
-### Alterar Cores
-No arquivo `css/style.css`, modifique as variáveis de cor:
-
-```css
-/* Cores principais */
---primary-blue: #3b82f6;
---primary-purple: #8b5cf6;
---whatsapp-green: #25d366;
-```
-
-### Adicionar Mais Planos
-1. Copie um card de plano para o `index.html`
-2. Altere as informações (preço, recursos, etc.)
-3. Adicione a função correspondente no `script.js`
-
-### Modificar Animações
-Ajuste as configurações do AOS no `script.js`:
-
-```javascript
-AOS.init({
-    duration: 800,    // Duração da animação
-    easing: 'ease-in-out',
-    once: false,       // Animar apenas uma vez
-    offset: 100       // Offset para trigger
-});
-```
-
-## Compatibilidade
-- ✅ Chrome, Firefox, Safari, Edge
-- ✅ Dispositivos móveis (iOS/Android)
-- ✅ Tablets e desktops
-- ✅ WhatsApp Web e aplicativo
-
 ## Suporte
-Para dúvidas ou customizações adicionais, consulte:
+- Para dúvidas ou customizações adicionais, consulte: DanielAbbud/Quintela 
 - Documentação HTML/CSS/JavaScript
 - Guia do Font Awesome para ícones
 - Documentação do AOS para animações
