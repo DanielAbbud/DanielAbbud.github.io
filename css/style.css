@@ -65,7 +65,7 @@ body {
     font-size: 18px;
 }
 
-/* Header */
+/* Cabeçalho */
 .header {
     position: fixed;
     top: 0;
@@ -78,7 +78,7 @@ body {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 8px 0;
 }
 
 .navbar .container {
@@ -90,18 +90,18 @@ body {
 .nav-brand h2 {
     color: white;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
 }
 
-.nav-brand i {
-    color: #3b82f6;
-    margin-right: 8px;
+.nav-brand img {
+    height: 44px;
+    display: block;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-menu a {
@@ -129,7 +129,7 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Seção Hero (capa) */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -186,8 +186,15 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
 }
 
 .hero-content {
@@ -230,7 +237,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* TV Mockup */
+/* Mockup da TV */
 .tv-mockup {
     background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
     border-radius: 20px;
@@ -281,11 +288,20 @@ body {
 }
 
 @keyframes channelGlow {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.05); }
+
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
 }
 
-/* Benefits Section */
+/* Seção Benefícios */
 .benefits {
     padding: 100px 0;
     background: #f8fafc;
@@ -356,7 +372,7 @@ body {
     line-height: 1.6;
 }
 
-/* Plans Section */
+/* Seção Planos */
 .plans {
     padding: 100px 0;
     background: linear-gradient(135deg, #1a1b3a 0%, #2d1b69 100%);
@@ -398,7 +414,7 @@ body {
     position: absolute;
     top: 20px;
     right: -30px;
-    background: #8b5cf6;
+    background: #6529f0;
     color: white;
     padding: 8px 40px;
     font-weight: 600;
@@ -486,7 +502,7 @@ body {
     justify-content: center;
 }
 
-/* FAQ Section */
+/* Seção FAQ (Perguntas) */
 .faq {
     padding: 100px 0;
     background: #f8fafc;
@@ -550,7 +566,7 @@ body {
     line-height: 1.6;
 }
 
-/* Contact Section */
+/* Seção Contato */
 .contact {
     padding: 100px 0;
     background: linear-gradient(135deg, #1a1b3a 0%, #2d1b69 100%);
@@ -615,7 +631,7 @@ body {
     text-align: center;
 }
 
-/* Footer */
+/* Rodapé */
 .footer {
     background: #0f172a;
     color: white;
@@ -684,48 +700,76 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVO (até 768px) ===== */
+
 @media (max-width: 768px) {
+
+    /* topo mais fino */
+    .navbar {
+        padding: 4px 0;
+    }
+
+    .nav-brand h2 {
+        font-size: 18px;
+    }
+
+    .nav-brand img {
+        height: 26px;
+    }
+
+    /* logo menor no celular */
+
+    /* botão hamburguer visível */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* menu mobile tipo “drop” ocupando a tela */
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 44px;
+        /* altura do header no mobile */
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 44px);
         background: rgba(26, 27, 58, 0.98);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding-top: 2rem;
+        padding-top: 16px;
         transition: left 0.3s ease;
+        gap: 12px;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
-    .nav-toggle {
-        display: flex;
+    .nav-menu a {
+        font-size: 15px;
+        padding: 8px 0;
     }
 
+    /* herói e tipografia mais compactos */
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center;
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     .hero-text h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .hero-buttons {
         justify-content: center;
     }
 
+    /* grades em 1 coluna */
     .benefits-grid {
         grid-template-columns: 1fr;
     }
@@ -740,7 +784,7 @@ body {
 
     .contact-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center;
     }
 
@@ -750,9 +794,25 @@ body {
     }
 }
 
+/* ===== RESPONSIVO (até 480px) ===== */
+
 @media (max-width: 480px) {
     .container {
-        padding: 0 15px;
+        padding: 0 14px;
+    }
+
+    /* header ainda mais fino */
+    .navbar {
+        padding: 3px 0;
+    }
+
+    .nav-brand img {
+        height: 24px;
+    }
+
+    .nav-menu {
+        top: 40px;
+        height: calc(100vh - 40px);
     }
 
     .hero-text h1 {
@@ -760,15 +820,15 @@ body {
     }
 
     .hero-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     .btn {
-        padding: 12px 20px;
+        padding: 12px 18px;
         font-size: 14px;
     }
 
@@ -782,4 +842,3 @@ body {
         max-width: 280px;
     }
 }
-

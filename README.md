@@ -63,9 +63,6 @@ O site gera mensagens automáticas para cada plano:
 - Guia do Font Awesome para ícones
 - Documentação do AOS para animações
 
-## Licença
-Este projeto é de uso livre para fins comerciais.
-
 ## CREDITOS 
 Desenvolvido por Daniel Quintela!
 
