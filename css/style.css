@@ -842,3 +842,26 @@ body {
         max-width: 280px;
     }
 }
+    /* Botão de voltar ao topo */
+    #btnTopo {
+            display: none;
+            /* escondido por padrão */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            background-color: #008afc;
+            color: #1a1b3a;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+    
+    #btnTopo:hover {
+            background-color: #ff9900;
+            transform: scale(1.1);
+        }

@@ -1,4 +1,4 @@
-// Initialize AOS (Animate On Scroll)
+// Inicializa AOS (Animação ao rolar a página
 AOS.init({
     duration: 800,
     easing: 'ease-in-out',
@@ -6,7 +6,7 @@ AOS.init({
     offset: 100
 });
 
-// Mobile Navigation Toggle
+// Alternar navegação móvel
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -14,32 +14,32 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Fechar menu móvel ao clicar em um link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
     });
 });
 
-// FAQ Accordion
+// Accordion de FAQ
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', () => {
         const faqItem = question.parentElement;
         const isActive = faqItem.classList.contains('active');
 
-        // Close all FAQ items
+        // Fecha todos os itens de FAQ
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
         });
 
-        // Open clicked item if it wasn't active
+        // Abre o item clicado se ele não estiver ativo
         if (!isActive) {
             faqItem.classList.add('active');
         }
     });
 });
 
-// WhatsApp Integration
+// Integração com WhatsApp
 function openWhatsApp(plan) {
     const phoneNumber = '553897290904'; //  Numero de telefone do WhatsApp
     // Mensagem personalizada baseada no plano selecionado
@@ -60,7 +60,7 @@ function openWhatsApp(plan) {
     window.open(whatsappURL, '_blank');
 }
 
-// Smooth scrolling for anchor links
+// Rolagem suave para links de âncora
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -77,7 +77,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header background on scroll
+// Alterar fundo do cabeçalho ao rolar a página
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
@@ -92,7 +92,7 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// Intersection Observer for animations
+// Adicionar animação de carregamento
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -106,12 +106,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation
+// Intersection Observer para animações
 document.querySelectorAll('.benefit-item, .plan-card, .faq-item').forEach(el => {
     observer.observe(el);
 });
 
-// Add click tracking for analytics (optional)
+// Adicionar rastreamento de cliques para análise (opcional)
 function trackClick(element, action) {
     // Aqui você pode adicionar código para rastrear cliques
     // Por exemplo, Google Analytics ou Facebook Pixel
@@ -126,14 +126,14 @@ document.querySelectorAll('.plan-btn').forEach(btn => {
     });
 });
 
-// Track WhatsApp button clicks
+// Rastrear cliques nos botões dos planos
 document.querySelectorAll('.btn-whatsapp').forEach(btn => {
     btn.addEventListener('click', () => {
         trackClick('whatsapp-button', 'contact');
     });
 });
 
-// Form validation (if you add a contact form later)
+// Rastrear cliques nos botões do WhatsApp
 function validateForm(form) {
     const inputs = form.querySelectorAll('input[required], textarea[required]');
     let isValid = true;
@@ -150,7 +150,7 @@ function validateForm(form) {
     return isValid;
 }
 
-// Add error styles for form validation
+// Validação de formulário (caso adicione um formulário de contato depois)
 const style = document.createElement('style');
 style.textContent = `
     .error {
@@ -159,4 +159,28 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Mostrar/esconder botão SOMENTE na última aba
+const btnTopo = document.getElementById("btnTopo");
+const ultimaSecao = document.querySelector("#contact"); // última seção
+
+window.addEventListener("scroll", () => {
+    const posicaoSecao = ultimaSecao.getBoundingClientRect();
+
+    // Se a parte de cima da última seção estiver visível na tela
+    if (posicaoSecao.top <= window.innerHeight / 2) {
+        btnTopo.style.display = "block";
+    } else {
+        btnTopo.style.display = "none";
+    }
+});
+
+// Ação do botão para subir
+btnTopo.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
 
