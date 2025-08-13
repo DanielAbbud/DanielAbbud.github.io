@@ -51,8 +51,8 @@ const phoneNumber = '553897290904'; // Numero de telefone
 
 O site gera mensagens automáticas para cada plano:
 
-### Plano Básico
-> "Olá! Tenho interesse no *Plano Básico* de Zaapppyy TV por R$ 24,99/mês. Gostaria de mais informações sobre como assinar."
+### Plano Top
+> "Olá! Tenho interesse no *Plano Top* de Zaapppyy TV por R$ 24,99/mês. Gostaria de mais informações sobre como assinar."
 
 ### Plano Premium  
 > "Olá! Tenho interesse no *Plano Premium* de Zaapppyy TV  por R$ 34,99/mês. Gostaria de mais informações sobre como assinar."

@@ -372,6 +372,11 @@ body {
     line-height: 1.6
 }
 
+/* Ícone servidor para o card de Servidores */
+.benefit-icon.accent-amber {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
 /* Planos */
 .plans {
     padding: 100px 0;
@@ -805,53 +810,7 @@ body {
         text-align: center
     }
 }
-
-/* ===== Responsivo (<= 480px) ===== */
-@media (max-width:480px) {
-    .container {
-        padding: 0 14px
-    }
-
-    .navbar {
-        padding: 3px 0
-    }
-
-    .nav-brand img {
-        height: 24px
-    }
-
-    .nav-menu {
-        top: 40px;
-        height: calc(100vh - 40px)
-    }
-
-    .hero-text h1 {
-        font-size: 2rem
-    }
-
-    .hero-text h2 {
-        font-size: 1.45rem
-    }
-
-    .section-header h2 {
-        font-size: 1.9rem
-    }
-
-    .btn {
-        padding: 12px 18px;
-        font-size: 14px
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-        max-width: 280px
-    }
-}
+/* ===== Planos (Plan Features) ===== */
 
 /* ===== Subtópicos (listas internas dos planos) ===== */
 .plan-features .feature-list li .title {
@@ -901,13 +860,6 @@ body {
 /* (opcional) dá um espacinho fixo pro ícone dos itens principais */
 .plan-features .feature-list li i {
     flex: 0 0 18px;
-}
-
-@media (max-width:480px){
-  .plan-features .feature-list li ul.sub{
-    margin-left: 24px;          /* recuo um pouco menor no mobile */
-    padding-left: 10px;
-  }
 }
 
 /* ===== Correção de alinhamento dos subtópicos com o título ===== */
@@ -967,10 +919,390 @@ body {
     content: none;
 }
 
-/* Mobile: mantém o mesmo alinhamento sem recuos extras */
+/* ===== Showcase / Destaques ===== */
+.showcase {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #111a2f 0%, #16243f 60%, #1a1b3a 100%);
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.showcase-media {
+    position: relative;
+}
+
+.showcase-image {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
+}
+
+/* Selos sobre a imagem */
+.showcase-badge {
+    position: absolute;
+    left: 16px;
+    right: auto;
+    background: #0b2c57;
+    /* azul escuro */
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.showcase-badge.badge-top {
+    top: -16px;
+}
+
+.showcase-badge.badge-bottom {
+    bottom: -16px;
+    left: 120px;
+}
+
+/* Texto e bullets */
+.showcase-text h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+
+.showcase-point {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 14px;
+    margin: 18px 0;
+}
+
+.point-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid #fbbf24;
+    color: #fbbf24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    background: rgba(251, 191, 36, .08);
+}
+
+.showcase-point h4 {
+    color: #fefce8;
+    font-weight: 700;
+    margin: 4px 0 4px;
+}
+
+.showcase-point p {
+    color: rgba(255, 255, 255, .8);
+    margin: 0;
+}
+
+/* Botão amarelo */
+.btn-cta {
+    background: #facc15;
+    color: #0f172a;
+    margin-top: 18px;
+}
+
+.btn-cta:hover {
+    background: #eab308;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(250, 204, 21, .35);
+}
+
+/* Responsivo */
+
+
+/* 4 cards lado a lado quando houver espaço */
+@media (min-width: 1100px) {
+    .benefits-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* ========= GLOBAL: garantias mobile ========= */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.benefit-item,
+.plan-card {
+    overflow: hidden;
+}
+
+/* previne “vazar” conteúdo */
+.btn,
+.btn-large {
+    touch-action: manipulation;
+}
+
+/* melhora clique em touch */
+
+/* ========= BREAKPOINT ≥1100px: 4 colunas nos benefícios ========= */
+@media (min-width:1100px) {
+    .benefits-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* ========= BREAKPOINT 992–1099px (tablets landscape / notebooks pequenos) ========= */
+@media (max-width:1099px) {
+
+    /* Hero: junta em 1 coluna quando apertar */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 80px 0 60px;
+    }
+
+    .tv-mockup {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    .tv-screen {
+        padding: 12px;
+    }
+
+    .channel-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    /* Planos: tipografia um pouco menor */
+    .plan-price .amount {
+        font-size: 2.6rem;
+    }
+
+    .plan-price .currency {
+        font-size: 1.25rem;
+    }
+
+    .plan-price .period {
+        font-size: 1rem;
+    }
+}
+
+/* ========= BREAKPOINT 768–991px (tablets retrato) ========= */
+@media (min-width:768px) and (max-width:991px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+
+/* ========= BREAKPOINT ≤767px (celulares) ========= */
+@media (max-width:767px) {
+
+    /* Container e tipografia */
+    .container {
+        padding: 0 14px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .hero-text p {
+        font-size: 1.05rem;
+    }
+
+    /* Hero / TV */
+    .tv-mockup {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .tv-screen {
+        padding: 10px;
+    }
+
+    .channel-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Showcase (seção nova com os selos) */
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .showcase {
+        padding: 56px 0;
+    }
+
+    .showcase-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .showcase-badge {
+        font-size: .86rem;
+        padding: 10px 14px;
+    }
+
+    .showcase-badge.badge-top {
+        top: -10px;
+    }
+
+    .showcase-badge.badge-bottom {
+        bottom: -10px;
+        left: 16px;
+    }
+
+    /* Benefícios */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .benefit-item {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .benefit-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .benefit-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .benefit-item p {
+        font-size: .95rem;
+    }
+
+    /* Planos */
+    .plan-badge {
+        top: 14px;
+        right: -22px;
+        padding: 6px 34px;
+        font-size: 12px;
+    }
+
+    .plan-header {
+        padding: 1.5rem;
+    }
+
+    .plan-price .amount {
+        font-size: 2.2rem;
+    }
+
+    .plan-features {
+        padding: 1.25rem;
+    }
+
+    .plan-features .feature-list>li {
+        padding: .65rem 0;
+    }
+
+    .plan-btn {
+        width: calc(100% - 2.5rem);
+        margin: 0 1.25rem 1.25rem;
+    }
+
+    /* FAQ: toque confortável */
+    .faq-question {
+        padding: 1.25rem 1rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem;
+    }
+
+    /* Contato */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .contact-methods {
+        align-items: center;
+    }
+
+    .contact-method i {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .btn-cta,
+    .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ========= BREAKPOINT ≤480px (telefones pequenos) ========= */
 @media (max-width:480px) {
-    .plan-features .feature-list li ul.sub {
-        margin-left: 0;
-        padding-left: 16px;
+    .nav-menu {
+        top: 40px;
+        height: calc(100vh - 40px);
+    }
+
+    .showcase-badge {
+        font-size: .8rem;
+        padding: 8px 12px;
+    }
+}
+
+/* ========= (opcional) reduzir animações em telas pequenas ========= */
+@media (max-width:767px) {
+    [data-aos] {
+        transform: none !important;
+        transition: none !important;
+        opacity: 1 !important;
     }
 }

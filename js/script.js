@@ -63,7 +63,7 @@ function openWhatsApp(plan) {
     switch (plan) {
         case "basico":
             message =
-                "Olá! Tenho interesse no *Plano Básico* de Zaappyy TV por R$ 24,99/mês. Gostaria de mais informações sobre como assinar.";
+                "Olá! Tenho interesse no *Plano Top* de Zaappyy TV por R$ 24,99/mês. Gostaria de mais informações sobre como assinar.";
             break;
         case "premium":
             message =
@@ -202,3 +202,6 @@ if (btnTopo && ultimaSecao) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+
+
