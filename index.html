@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaappyy TV </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zaappyy TV</title>
     <meta name="description"
         content="Milhares de canais de TV e streaming com qualidade HD/4K. Planos a partir de R$ 24,99. Assine já pelo WhatsApp!">
 
-    <!--icone barra do navegador -->
+    <!-- Favicons -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -24,16 +24,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- AOS Animation -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- CSS principal -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-    <!-- Botão de Voltar ao Topo -->
-    <button id="btnTopo" title="Voltar ao topo">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
 <body>
     <!-- Header -->
@@ -41,7 +37,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="nav-brand">
-                    <img src="img/logo-zaappyy-hd.png" alt="Zaappyy TV" style="height:110px;">
+                    <img src="img/logo-zaappyy-hd.png" alt="Zaappyy TV" class="brand-logo">
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Início</a></li>
@@ -50,16 +46,14 @@
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-background">
             <div class="hero-shapes">
@@ -71,7 +65,7 @@
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
                 <div class="hero-text">
-                    <h1>Zaappyy TV </h1>
+                    <h1>Zaappyy TV</h1>
                     <h2>Entretenimento Sem Limites</h2>
                     <p>Milhares de canais de TV e streaming ao seu alcance. Qualidade HD/4K, múltiplos dispositivos e
                         suporte 24/7.</p>
@@ -107,6 +101,7 @@
         </div>
     </section>
 
+    <!-- Benefícios -->
     <section id="benefits" class="benefits">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -115,100 +110,154 @@
             </div>
 
             <div class="benefits-grid">
-
-                <!-- Qualidade HD/4K -->
                 <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="benefit-icon">
-                        <i class="fas fa-tv"></i> <!-- Ícone para Qualidade HD/4K -->
-                    </div>
+                    <div class="benefit-icon"><i class="fas fa-tv"></i></div>
                     <h3>Qualidade HD/4K</h3>
                     <p>Imagem cristalina em todos os seus dispositivos com resolução até 4K</p>
                 </div>
 
-                <!-- Múltiplos Dispositivos -->
                 <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="benefit-icon">
-                        <i class="fas fa-laptop-house"></i> <!-- Ícone representando múltiplos dispositivos -->
-                    </div>
+                    <div class="benefit-icon"><i class="fas fa-laptop-house"></i></div>
                     <h3>Múltiplos Dispositivos</h3>
                     <p>Assista em TV, celular, tablet, computador e Smart TV simultaneamente</p>
                 </div>
 
-                <!-- Suporte 24/7 -->
                 <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="benefit-icon">
-                        <i class="fas fa-headset"></i> <!-- Headset para suporte -->
-                    </div>
+                    <div class="benefit-icon"><i class="fas fa-headset"></i></div>
                     <h3>Suporte 24/7</h3>
                     <p>Atendimento especializado disponível todos os dias, 24 horas por dia</p>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- Planos -->
 
-    <!-- Plans Section -->
     <section id="plans" class="plans">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Escolha seu Plano</h2>
                 <p>Planos flexíveis para todos os perfis e necessidades</p>
             </div>
-            <div class="plans-grid">
-                <!-- Plano Básico -->
-                <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
 
+            <div class="plans-grid">
+                <!-- Básico -->
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="plan-header plan-basic">
-                        <h3>BÁSICO</h3>
+                        <h3>PLANO TOP</h3>
                         <div class="plan-price">
                             <span class="currency">R$</span>
                             <span class="amount">24,99</span>
                             <span class="period">/mês</span>
                         </div>
                     </div>
+
                     <div class="plan-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 2000 canais</li>
-                            <li><i class="fas fa-check"></i> Qualidade HD</li>
-                            <li><i class="fas fa-check"></i> 1 dispositivo simultâneo</li>
-                            <li><i class="fas fa-check"></i> Suporte técnico</li>
-                            <li><i class="fas fa-check"></i> Canais nacionais</li>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> <span>Suporte</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais SD, HD, FHD, H265</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Filmes, Séries e Novelas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Média frequência de atualização</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Conteúdo de todos os streamings</span></li>
+
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais 4K</span></li>
+
+                            <li class="disabled">
+                                <i class="fa-solid fa-times"></i>
+                                <span class="title">Jogos em destaque:</span>
+                                <ul class="sub">
+                                    <li>Acesse o jogo do seu time de forma rápida</li>
+                                </ul>
+                            </li>
+
+                            <li class="disabled">
+                                <i class="fa-solid fa-times"></i>
+                                <span class="title">Área do cliente com:</span>
+                                <ul class="sub">
+                                    <li>Jogos do dia</li>
+                                    <li>Esportes de hoje</li>
+                                    <li>Séries atualizadas na semana</li>
+                                    <li>Filmes adicionados na semana</li>
+                                    <li>Dica da semana</li>
+                                </ul>
+                            </li>
+
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais ÁudioBooks</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Cursos Premium</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais OnlyFans</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais Xvideos RED</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais Dual Áudio e
+                                    Legendados</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais Internacionais</span>
+                            </li>
                         </ul>
                     </div>
+
                     <button class="btn btn-whatsapp plan-btn" onclick="openWhatsApp('basico')">
                         <i class="fab fa-whatsapp"></i> Assinar Agora
                     </button>
                 </div>
 
-                <!-- Plano Premium -->
+                <!-- Premium -->
                 <div class="plan-card plan-featured" data-aos="fade-up" data-aos-delay="200">
-                    <div class="plan-badge">Mais Popular</div>
                     <div class="plan-header plan-premium">
-                        <h3>PREMIUM</h3>
+                        <h3>PLANO PREMIUM</h3>
                         <div class="plan-price">
                             <span class="currency">R$</span>
-                            <span class="amount">34,99<span>
-                                    <span class="period">/mês</span>
+                            <span class="amount">34,99</span>
+                            <span class="period">/mês</span>
                         </div>
                     </div>
+
                     <div class="plan-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> 10000 canais</li>
-                            <li><i class="fas fa-check"></i> Qualidade Full HD</li>
-                            <li><i class="fas fa-check"></i> 1 dispositivos simultâneos</li>
-                            <li><i class="fas fa-check"></i> Filmes e séries</li>
-                            <li><i class="fas fa-check"></i> Canais internacionais</li>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> <span>Suporte</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais SD, HD, FHD, H265</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Filmes, Séries e Novelas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Média frequência de atualização</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Conteúdo de todos os streamings</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais 4K</span></li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span class="title">Jogos em destaque:</span>
+                                <ul class="sub">
+                                    <li>Acesse o jogo do seu time de forma rápida</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span class="title">Área do cliente com:</span>
+                                <ul class="sub">
+                                    <li>Jogos do dia</li>
+                                    <li>Esportes de hoje</li>
+                                    <li>Séries atualizadas na semana</li>
+                                    <li>Filmes adicionados na semana</li>
+                                    <li>Dica da semana</li>
+                                </ul>
+                            </li>
+
+                            <li><i class="fa-solid fa-check"></i> <span>Canais ÁudioBooks</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Cursos Premium</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais OnlyFans</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais Xvideos RED</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais Dual Áudio e Legendados</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais Internacionais</span></li>
                         </ul>
                     </div>
+
                     <button class="btn btn-whatsapp plan-btn" onclick="openWhatsApp('premium')">
                         <i class="fab fa-whatsapp"></i> Assinar Agora
                     </button>
                 </div>
-
+            </div>
+        </div>
     </section>
 
-    <!-- FAQ Section -->
+
+
+    <!-- FAQ -->
     <section id="faq" class="faq">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -223,8 +272,7 @@
                     </div>
                     <div class="faq-answer">
                         <p>O Zaappyy TV transmite conteúdo de TV através da internet, oferecendo qualidade superior e
-                            mais
-                            flexibilidade que a TV tradicional.</p>
+                            mais flexibilidade que a TV tradicional.</p>
                     </div>
                 </div>
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
@@ -261,7 +309,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contato -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content" data-aos="fade-up">
@@ -273,7 +321,7 @@
                             <i class="fab fa-whatsapp"></i>
                             <div>
                                 <h4>WhatsApp</h4>
-                                <p>(38) 9729-0904 </p>
+                                <p>(38) 9729-0904</p>
                             </div>
                         </div>
                         <div class="contact-method">
@@ -308,7 +356,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="nav-brand">
-                        <img src="img/logo-zaappyy-hd.png" alt="Zaappyy TV" style="height:120px;">
+                        <img src="img/logo-zaappyy-hd.png" alt="Zaappyy TV" class="brand-logo-lg">
                     </div>
                     <p>Entretenimento sem limites para toda família</p>
                 </div>
@@ -332,6 +380,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
