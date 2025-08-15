@@ -9,8 +9,9 @@ Site profissional para vendas de serviços de Zaappyy TV com integração direta
 - **Design Moderno**: Interface atrativa com gradientes e animações
 - **Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
 - **Integração WhatsApp**: Botões que direcionam automaticamente para o WhatsApp
-- **2 Planos**: Básico (R$ 24,99), Premium (R$ 34,99)
+- **2 Planos**: Top (R$ 25,00), Premium (R$ 35,00)
 - **FAQ Interativo**: Seção de perguntas frequentes com accordion
+- **Teste Gratuito**: Teste gratuito durante 4 horas. (Com Faixa Rolante)
 - **Animações**: Efeitos visuais suaves com AOS (Animate On Scroll)
 
 ### 🎨 Design
@@ -52,10 +53,10 @@ const phoneNumber = '553897290904'; // Numero de telefone
 O site gera mensagens automáticas para cada plano:
 
 ### Plano Top
-> "Olá! Tenho interesse no *Plano Top* de Zaapppyy TV por R$ 24,99/mês. Gostaria de mais informações sobre como assinar."
+> "Olá! Tenho interesse no *Plano Top* de Zaapppyy TV por R$ 25,00/mês. Gostaria de mais informações sobre como assinar."
 
 ### Plano Premium  
-> "Olá! Tenho interesse no *Plano Premium* de Zaapppyy TV  por R$ 34,99/mês. Gostaria de mais informações sobre como assinar."
+> "Olá! Tenho interesse no *Plano Premium* de Zaapppyy TV  por R$ 35,00/mês. Gostaria de mais informações sobre como assinar."
 
 ## Suporte
 - Para dúvidas ou customizações adicionais, consulte: DanielAbbud/Quintela 

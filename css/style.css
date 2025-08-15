@@ -13,7 +13,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden
+    overflow-x: hidden  
 }
 
 .container {
@@ -491,6 +491,7 @@ body {
 .plan-features li:last-child {
     border-bottom: none
 }
+
 /* itens desativados: ícone vermelho e itens ativados: com  icone verde texto um pouco mais frio */
 .plan-features i {
     color: #10b981;
@@ -500,6 +501,7 @@ body {
 .plan-features li.disabled i {
     color: #ef4444;
 }
+
 .plan-btn {
     width: calc(100% - 4rem);
     margin: 0 2rem 2rem;
@@ -810,6 +812,7 @@ body {
         text-align: center
     }
 }
+
 /* ===== Planos (Plan Features) ===== */
 
 /* ===== Subtópicos (listas internas dos planos) ===== */
@@ -1304,5 +1307,94 @@ video {
         transform: none !important;
         transition: none !important;
         opacity: 1 !important;
+    }
+}
+
+/* ===== Faixa rolante (ticker) ===== */
+.ticker {
+    width: 100%;
+    overflow: hidden;
+    background: #facc15;
+    /* amarelo do seu tema */
+    color: #0f172a;
+    /* texto escuro */
+    border-top: 1px solid rgba(0, 0, 0, .08);
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+}
+
+.ticker__inner {
+    display: flex;
+    width: max-content;
+    animation: ticker-scroll var(--duration, 40s) linear infinite;
+}
+
+.ticker__list {
+    display: flex;
+    gap: 2.25rem;
+    /* espaço entre repetições */
+    padding: 10px 1.25rem;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.ticker__list li {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 800;
+    letter-spacing: .4px;
+    font-size: .95rem;
+    text-transform: uppercase;
+}
+
+/* Ícone de TV no ticker */
+.ticker__icon {
+    font-size: 1rem;
+    /* ajuste o tamanho do ícone aqui */
+    margin-right: 12px;
+    color: #0f172a;
+    /* mesma cor do texto da faixa */
+    opacity: .85;
+}
+
+@media (max-width:768px) {
+    .ticker__icon {
+        font-size: .9rem;
+        margin-right: 8px;
+    }
+}
+
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+    /* como temos 2 listas iguais, -50% cria loop perfeito */
+}
+
+/* pausa ao passar o mouse (opcional) */
+.ticker:hover .ticker__inner {
+    animation-play-state: paused;
+}
+
+/* mobile: fontes e espaçamentos menores */
+@media (max-width:768px) {
+    .ticker__list {
+        gap: 1.25rem;
+        padding: 8px 1rem;
+    }
+
+    .ticker__list li {
+        font-size: .85rem;
+    }
+
+    .ticker__list .dot {
+        width: 7px;
+        height: 7px;
+        margin-right: 8px;
     }
 }

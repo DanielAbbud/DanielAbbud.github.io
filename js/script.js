@@ -63,11 +63,11 @@ function openWhatsApp(plan) {
     switch (plan) {
         case "basico":
             message =
-                "Olá! Tenho interesse no *Plano Top* de Zaappyy TV por R$ 24,99/mês. Gostaria de mais informações sobre como assinar.";
+                "Olá! Tenho interesse no *Plano Top* de Zaappyy TV por R$ 25,00/mês. Gostaria de mais informações sobre como assinar.";
             break;
         case "premium":
             message =
-                "Olá! Tenho interesse no *Plano Premium* de Zaappyy TV por R$ 34,99/mês. Gostaria de mais informações sobre como assinar.";
+                "Olá! Tenho interesse no *Plano Premium* de Zaappyy TV por R$ 35,00/mês. Gostaria de mais informações sobre como assinar.";
             break;
         default:
             message =
