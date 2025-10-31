@@ -1,67 +1,528 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Poods Store — Compra via WhatsApp</title>
-  <meta name="description" content="Loja de poods com compra direta via WhatsApp." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zaappyy TV</title>
+    <meta name="description"
+        content="Milhares de canais de TV e streaming com qualidade HD/4K. Planos a partir de R$ 25,00. Assine já pelo WhatsApp!">
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="logo">🐾</span>
-        <h1>Poods Store</h1>
-      </div>
-      <div class="actions">
-        <input id="searchInput" class="search" type="search" placeholder="Buscar produto..." />
-        <button id="themeToggle" class="ghost">Tema</button>
-      </div>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="img/logo-zaappyy-hd.png" alt="Zaappyy TV" class="brand-logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#plans">Planos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <div class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Escolha, clique e fale no WhatsApp</h2>
-        <p>Catálogo de poods com compra direta pelo WhatsApp.</p>
-        <a href="#produtos" class="cta">Ver Produtos</a>
-      </div>
-    </section>
-
-    <section id="produtos" class="products-section">
-      <div class="toolbar">
-        <div class="filters">
-          <select id="categoryFilter">
-            <option value="">Todas as categorias</option>
-          </select>
-          <select id="sortSelect">
-            <option value="relevance">Ordenar: Relevância</option>
-            <option value="price_asc">Preço: menor → maior</option>
-            <option value="price_desc">Preço: maior → menor</option>
-            <option value="name_asc">Nome: A → Z</option>
-          </select>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
         </div>
-      </div>
-      </div>
-
-      <div id="grid" class="product-grid"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-text">
+                    <h1>Zaappyy TV</h1>
+                    <h2>Entretenimento Sem Limites</h2>
+                    <p>Milhares de canais de TV e streaming ao seu alcance. Qualidade HD/4K, múltiplos dispositivos e
+                        suporte 24/7.</p>
+                    <div class="hero-buttons">
+                        <a href="#plans" class="btn btn-primary">Ver Planos</a>
+                        <a href="https://wa.me/553897290904?text=Olá! Vim pelo site e gostaria de saber mais sobre os planos de Zaappyy TV."
+                            class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Falar com um consultor
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                    <div class="tv-mockup">
+                        <div class="tv-screen">
+                            <div class="channel-grid">
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                                <div class="channel-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Poods Store. Compra via WhatsApp.</p>
+    <!-- Faixa rolante: TESTE GRÁTIS -->
+    <div class="ticker">
+        <div class="ticker__inner" style="--duration: 18s">
+            <ul class="ticker__list">
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+            </ul>
+            <!-- cópia para loop perfeito -->
+            <ul aria-hidden="true" class="ticker__list">
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+                <li><i class="fa-solid fa-tv ticker__icon" aria-hidden="true"></i> TESTE GRÁTIS</li>
+            </ul>
+        </div>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+
+    <!-- Showcase / Destaques -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <div class="showcase-grid">
+
+                <!-- Lado esquerdo: imagem com “selos” -->
+                <div class="showcase-media" data-aos="fade-right">
+                    <img src="img/showcase-tv.png" alt="+40 mil tipos de conteúdo" class="showcase-image">
+
+                    <span class="showcase-badge badge-top">
+                        +40 MIL TIPOS DE CONTEÚDO
+                    </span>
+
+                    <span class="showcase-badge badge-bottom">
+                        CANAIS ABERTOS E FECHADOS
+                    </span>
+                </div>
+
+                <!-- Lado direito: textos e destaques -->
+                <div class="showcase-text" data-aos="fade-left" data-aos-delay="150">
+                    <h2>Entretenimento completo<br>na palma da sua mão</h2>
+
+                    <div class="showcase-point">
+                        <div class="point-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <h4>Explore mais de 40 mil tipos de conteúdo</h4>
+                            <p>Filmes, séries e novelas de todos os gêneros em uma plataforma intuitiva, feita para
+                                garantir
+                                sua diversão.</p>
+                        </div>
+                    </div>
+
+                    <div class="showcase-point">
+                        <div class="point-icon">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                        </div>
+                        <div>
+                            <h4>Canais abertos e fechados</h4>
+                            <p>Todos os canais ao vivo, com qualidade 4K, FHD, HD e SD, sem travamentos. Tudo o que você
+                                precisa, em um só lugar.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/553897290904?text=Quero%20o%20teste%20grátis%20do%20Zaappyy%20TV"
+                        class="btn btn-cta">
+                        QUERO TESTAR GRÁTIS&nbsp;&nbsp;<i class="fa-regular fa-message"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Benefícios -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Por que escolher nosso Zaappyy TV</h2>
+                <p>Oferecemos a melhor experiência em entretenimento digital</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon"><i class="fas fa-tv"></i></div>
+                    <h3>Qualidade HD/4K</h3>
+                    <p>Imagem cristalina em todos os seus dispositivos com resolução até 4K</p>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon"><i class="fas fa-laptop-house"></i></div>
+                    <h3>Múltiplos Dispositivos</h3>
+                    <p>Assista em TV, celular, tablet, computador e Smart TV simultaneamente</p>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Suporte 24/7</h3>
+                    <p>Atendimento especializado disponível todos os dias, 24 horas por dia</p>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon accent-amber">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Servidores</h3>
+                    <p>Transmissões estáveis e sem travamentos, com a melhor qualidade de imagem e som.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+
+    <section id="plans" class="plans">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Conheça nossos planos</h2>
+                <p>Planos flexíveis para todos os perfis e necessidades</p>-
+            </div>
+
+            <div class="plans-grid">
+                <!-- Básico -->
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-header plan-basic">
+                        <h3>PLANO TOP</h3>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">25,00</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+
+                    <div class="plan-features">
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> <span>Suporte</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais SD, HD, FHD, H265</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Filmes, Séries e Novelas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Média frequência de atualização</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Conteúdo de todos os streamings</span></li>
+
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais 4K</span></li>
+
+                            <li class="disabled">
+                                <i class="fa-solid fa-times"></i>
+                                <span class="title">Jogos em destaque:</span>
+                                <ul class="sub">
+                                    <li>Acesse o jogo do seu time de forma rápida</li>
+                                </ul>
+                            </li>
+
+                            <li class="disabled">
+                                <i class="fa-solid fa-times"></i>
+                                <span class="title">Área do cliente com:</span>
+                                <ul class="sub">
+                                    <li>Jogos do dia</li>
+                                    <li>Esportes de hoje</li>
+                                    <li>Séries atualizadas na semana</li>
+                                    <li>Filmes adicionados na semana</li>
+                                    <li>Dica da semana</li>
+                                </ul>
+                            </li>
+
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais ÁudioBooks</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Cursos Premium</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais OnlyFans</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais Xvideos RED</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais Dual Áudio e
+                                    Legendados</span></li>
+                            <li class="disabled"><i class="fa-solid fa-times"></i> <span>Canais Internacionais</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-whatsapp plan-btn" onclick="openWhatsApp('basico')">
+                        <i class="fab fa-whatsapp"></i> Assinar Agora
+                    </button>
+                </div>
+
+                <!-- Premium -->
+                <div class="plan-card plan-featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plan-header plan-premium">
+                        <h3>PLANO PREMIUM</h3>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">35,00</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+
+                    <div class="plan-features">
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> <span>Suporte</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais SD, HD, FHD, H265</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Filmes, Séries e Novelas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Média frequência de atualização</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Conteúdo de todos os streamings</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais 4K</span></li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span class="title">Jogos em destaque:</span>
+                                <ul class="sub">
+                                    <li>Acesse o jogo do seu time de forma rápida</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span class="title">Área do cliente com:</span>
+                                <ul class="sub">
+                                    <li>Jogos do dia</li>
+                                    <li>Esportes de hoje</li>
+                                    <li>Séries atualizadas na semana</li>
+                                    <li>Filmes adicionados na semana</li>
+                                    <li>Dica da semana</li>
+                                </ul>
+                            </li>
+
+                            <li><i class="fa-solid fa-check"></i> <span>Canais ÁudioBooks</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Cursos Premium</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais OnlyFans</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais Xvideos RED</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais Dual Áudio e Legendados</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span>Canais Internacionais</span></li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-whatsapp plan-btn" onclick="openWhatsApp('premium')">
+                        <i class="fab fa-whatsapp"></i> Assinar Agora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre nossos serviços</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Como funciona o Zaappyy TV?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O Zaappyy TV transmite conteúdo de TV através da internet, oferecendo qualidade superior e
+                            mais flexibilidade que a TV tradicional.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Preciso de internet rápida?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Recomendamos uma conexão de pelo menos 10 Mbps para HD e 25 Mbps para 4K para melhor
+                            experiência.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Posso cancelar a qualquer momento?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, não há fidelidade. Você pode cancelar seu plano a qualquer momento através do WhatsApp.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>Funciona em Smart TV?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, funciona em Smart TVs, Android TV, Apple TV, Chromecast e diversos outros dispositivos.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Posso testar antes de assinar?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, nosso plano oferece um teste gratuito de 4 horas para você experimentar todos os
+                            recursos sem compromisso.</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Qual e a politica de reembolso?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Garantimos a devolução em caso de problemas técnicos comprovados e sem solução..</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Como faço pra começar?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>É simples! Escolha seu plano, entre em contato com nossos consultores por WhatsApp e em
+                            minutos, você terá o seu acesso
+                            completo ao nosso catálogo e canais.</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content" data-aos="fade-up">
+                <div class="contact-info">
+                    <h2>Ficou com mais alguma dúvida?</h2>
+                    <p>Entre em contato com nosso time de suporte da Zaappyy Tv no WhatsApp e teremos prazer em te
+                        ajudar!.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>(38) 9729-0904</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>cauaneres2@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Atendimento</h4>
+                                <p>24 horas por dia, 7 dias por semana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <a href="https://wa.me/553897290904?text=Olá! Vim pelo site! Quero saber mais informações."
+                        class="btn btn-whatsapp btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar com um consultor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <img src="img/logo-zaappyy-hd.png" alt="Zaappyy TV" class="brand-logo-lg">
+                    </div>
+                    <p>Entretenimento sem limites para toda família</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#benefits">Benefícios</a></li>
+                        <li><a href="#plans">Planos</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fab fa-whatsapp"></i> (38) 9729-0904</p>
+                    <p><i class="fas fa-envelope"></i> cauaneres2@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zaappyy TV. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btnTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
